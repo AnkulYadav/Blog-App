@@ -4,6 +4,7 @@ import BreadCrumbs from '../../components/BreadCrumbs'
 import { images } from '../../constants'
 import { Link } from 'react-router-dom'
 import SuggestedPosts from './container/SuggestedPosts'
+import CommentsContainer from '../../components/comments/CommentsContainer'
 
 const breadcrumbsData = [
     { name: 'Home', link: '/' },
@@ -89,10 +90,11 @@ function ArticleDetailPage() {
                     <BreadCrumbs data={breadcrumbsData} />
                     <img className='rounded-xl w-full' src={images.PostImage} alt="post image" />
                     <Link to="/blog/?category=selectedCategory" className='text-primary text-sm font-roboto inline-block mt-4 md:text-base'>EDUCATION</Link>
-                    <h1 className='text-xl font-bold font-medium font-roboto mt-4 text-dark-hard md:text-[26px]'>The ultimate guide to design</h1>
+                    <h1 className='text-xl font-bold font-roboto mt-4 text-dark-hard md:text-[26px]'>The ultimate guide to design</h1>
                     <div className='mt-4 text-dark-soft'>
                         <p className='leading-7 '>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi incidunt eos quia at a ab quae itaque non. Facilis quod accusantium, exercitationem numquam nihil fugit laborum quam eaque. Cupiditate, unde. Modi fugiat vel commodi similique reprehenderit consectetur ipsum magnam ullam accusantium? Dolores deleniti non nihil eum ullam consectetur veritatis eos.</p>
                     </div>
+                    <CommentsContainer classname="mt-10" logginedUserId="a" />
                 </article>
                 <SuggestedPosts className="mt-8 lg:mt-0 lg:max-w-xs" heading="Latest Article" posts={postsData} tags={TagData} />
             </section>
