@@ -5,6 +5,7 @@ import { images } from '../../constants'
 import { Link } from 'react-router-dom'
 import SuggestedPosts from './container/SuggestedPosts'
 import CommentsContainer from '../../components/comments/CommentsContainer'
+import SocialShareButtons from '../../components/SocialShareButtons'
 
 const breadcrumbsData = [
     { name: 'Home', link: '/' },
@@ -65,19 +66,19 @@ const TagData = [
     },
     {
         _id: 4,
-        name:'Music',
+        name: 'Music',
     },
     {
         _id: 5,
-        name:'Art',
+        name: 'Art',
     },
     {
         _id: 6,
-        name:'Photography',
+        name: 'Photography',
     },
     {
         _id: 7,
-        name:'Gaming',
+        name: 'Gaming',
     }
 ]
 
@@ -96,7 +97,25 @@ function ArticleDetailPage() {
                     </div>
                     <CommentsContainer classname="mt-10" logginedUserId="a" />
                 </article>
-                <SuggestedPosts className="mt-8 lg:mt-0 lg:max-w-xs" heading="Latest Article" posts={postsData} tags={TagData} />
+                <div>
+                    <SuggestedPosts
+                        className="mt-8 lg:mt-0 lg:max-w-xs"
+                        heading="Latest Article"
+                        posts={postsData}
+                        tags={TagData}
+                    />
+                    <div className='mt-7'>
+                        <h2 className='font-roboto font-medium text-dark-hard mb-4 md:text-xl'>
+                            Share On:
+                        </h2>
+                        <SocialShareButtons
+                            url={encodeURI("https://www.google.com/")}
+                            title={encodeURIComponent(
+                                "Lorem ipsum dolor sit amet."
+                            )} />
+                    </div>
+                </div>
+
             </section>
         </MainLayout>
     )

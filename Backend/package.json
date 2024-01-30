@@ -1,0 +1,23 @@
+{
+  "name": "blogappbackend",
+  "version": "1.0.0",
+  "description": "this the blog app ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnkulYadav/Blog-App.git"
+  },
+  "keywords": [
+    "blog",
+    "App"
+  ],
+  "author": "Ankul Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnkulYadav/Blog-App/issues"
+  },
+  "homepage": "https://github.com/AnkulYadav/Blog-App#readme"
+}
